@@ -1,0 +1,841 @@
+body {
+  background-color: black !important;
+}
+#root {
+  padding: 1rem;
+  background-color: black !important;
+}
+@media screen and (max-width: 600px) {
+  #root {
+    padding: 0px !important;
+  }
+}
+.logo {
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  height: 40px;
+}
+
+/* Connect Wallet Button */
+.navbar-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #5849fe !important;
+  /* background: linear-gradient(to right, #2a5c41, #59c88c); */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.navbar-disconnect-button {
+  padding: 7px 12px;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #de3842 !important;
+  /* background: linear-gradient(to right, #2a5c41, #59c88c); */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+@media screen and (max-width: 600px) {
+  .navbar-button img {
+    width: 28px;
+    height: auto;
+  }
+  .connect_wallet_text {
+    display: none !important;
+    color: #00ff00;
+  }
+  .navbar-button {
+    padding: 7px;
+  }
+}
+
+.navbar-button:hover {
+  background-color: #316c4c80;
+}
+
+.navbar-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.logo_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+}
+.beta_navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5849fe !important;
+  font-size: 16px !important;
+  padding: 5px 10px;
+  color: white !important;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.logo_image img {
+  border-radius: 10px;
+}
+
+.trading {
+  display: flex;
+  width: 100% !important;
+}
+.chart_history {
+  width: 60% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.network_select {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+}
+
+.description_text {
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  padding-right: 20px;
+}
+.realtime_chart {
+  padding-top: 30px;
+  padding-left: 3%;
+  width: 95%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center !important;
+}
+
+.history_period {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 3px;
+}
+.period_button {
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #1e1c1c;
+}
+.wallet_balance {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  font-family: sans-serif;
+  gap: 10px;
+}
+.wallet_balance_value {
+  color: #5849fe !important;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 18px !important;
+}
+.betting_history {
+  margin-top: 30px;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+}
+
+.betting_price {
+  font-family: monospace !important;
+  width: 95% !important;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  font-size: 22px;
+}
+.betting_price input {
+  font-size: 22px;
+  width: 80%;
+  color: white !important;
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+}
+/* .betting_options_buttons {
+  padding-top: 10px;
+  display: flex;
+  width: 100% !important;
+  justify-content: space-between;
+  align-items: center;
+} */
+.wallet_balance_text {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.balance_value_text {
+  font-family: monospace !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+.betting_options_buttons {
+  padding-top: 10px;
+  font-family: monospace !important;
+  font-size: 20px !important;
+  display: flex;
+  width: 100% !important;
+  justify-content: space-between;
+  align-items: center;
+}
+.selected_option_button {
+  cursor: pointer;
+  font-family: monospace !important;
+
+  /* background: linear-gradient(to right, #2a5c41, #59c88c); */
+  background-color: #5849fe !important;
+  border: white 1px solid !important;
+  color: white;
+  font-weight: bold;
+  width: 45%;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected_option_button:hover {
+  background-color: #665aec !important;
+}
+.selected_down_option_button {
+  cursor: pointer;
+  background-color: #de3842;
+
+  /* background: linear-gradient(to right, #591070, #825fc9); */
+  border: white 1px solid !important;
+  color: white;
+  font-weight: bold;
+  width: 45%;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected_down_option_button:hover {
+  background-color: #de3842;
+  /* background: linear-gradient(to right, #59107090, #825fc990); */
+}
+.option_button {
+  cursor: pointer;
+  /* background-color: transparent; */
+  background-color: #5849fe !important;
+  /* background: linear-gradient(to right, #2a5c41, #59c88c); */
+
+  /* border: #316c4c 2px solid; */
+  color: white;
+  font-weight: bold;
+  width: 45%;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.option_button:hover {
+  background-color: #5849fe80 !important;
+
+  /* background: linear-gradient(to right, #2a5c4190, #59c88c90) !important; */
+}
+.down_option_button {
+  cursor: pointer;
+  /* background-color: transparent; */
+  background-color: #de3842 !important;
+  /* background: linear-gradient(to right, #591070, #825fc9); */
+
+  /* border: #de3943 2px solid; */
+  color: white;
+  font-weight: bold;
+  width: 45%;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.down_option_button:hover {
+  background-color: #de384280 !important;
+
+  /* background: linear-gradient(to right, #59107090, #825fc990) !important; */
+}
+.duration_buttons {
+  width: 100% !important;
+  justify-content: space-between;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px !important;
+}
+.selected_time_button {
+  background-color: #5849fe !important;
+  margin-bottom: 5px;
+  font-family: monospace;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  width: 28%;
+  height: 30px;
+  border-radius: 7px;
+  column-gap: 15px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_right {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.win_payout {
+  font-size: 14px !important;
+  background-color: #1e1c1d !important;
+  /* background-color: #211319; */
+  width: 100%;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-family: monospace;
+  height: 32px;
+}
+.win_payout_info {
+  color: #59c88c90 !important;
+  font-family: monospace;
+  font-weight: 600 !important;
+  /* background: linear-gradient(to right, #2a5c4190, #59c88c90) !important; */
+}
+.time_button {
+  font-family: monospace !important;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #1e1c1d;
+  color: white;
+  width: 28%;
+  height: 30px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.time_button:hover {
+  background-color: #5849fe80 !important;
+  /* background-color: #316c4c90; */
+}
+.settings {
+  background-color: #0f1011 !important;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 40%;
+  border-radius: 10px;
+}
+.trade_settings {
+  font-family: sans-serif !important;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: fit-content;
+}
+.live_trades {
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  flex-direction: column;
+  height: fit-content;
+}
+.live_traders_content {
+  width: 100% !important;
+  color: white;
+  background-color: #0e0e0e;
+}
+
+.title_text {
+  padding-left: 10px;
+  padding-top: 10px;
+  color: white;
+  display: flex;
+  justify-content: start;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: sans-serif !important;
+}
+.trade_history_text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  font-family: sans-serif !important;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.large_title {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif !important;
+  font-family: "Times New Roman", Times, serif;
+}
+.chartContainer {
+  overflow: "hidden";
+
+  width: 100px;
+  height: 100px;
+  max-width: 120px;
+}
+.parent {
+  width: 600px;
+}
+.bet_button {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 40px;
+  font-size: 22px !important;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #316c4c;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+.bet_button:hover {
+  background-color: #316c4c80;
+}
+
+@media screen and (max-width: 1024px) {
+  /* If these elements are in a flex container, you can change the flex-direction */
+  .trading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Set both elements to full width on smaller screens */
+  .chart_history,
+  .settings {
+    width: 100% !important;
+  }
+}
+
+/* Dark mode container */
+.app-container {
+  /* text-align: center;
+  background-color: #121212;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+.latest_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif !important;
+  align-items: center;
+  gap: 3px;
+}
+.monospace_font {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  font-family: monospace !important;
+}
+.sans_font {
+  font-family: monospace;
+}
+/* Dropdown container */
+.dropdown-container {
+  margin-top: 10px;
+  position: relative;
+}
+.select_network {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 25px;
+}
+/* Custom Select */
+.custom-select {
+  background-color: #222;
+  color: white;
+  padding: 10px 35px 10px 10px;
+  font-size: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  appearance: none; /* Removes default arrow */
+}
+
+/* Hover & Focus */
+.custom-select:hover,
+.custom-select:focus {
+  border-color: #6a6d6a;
+}
+
+/* Dropdown Arrow */
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: white;
+}
+
+/* Options Styling */
+.custom-select option {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+.amount_validation {
+  padding-left: 10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  color: #de3842;
+  font-size: 14px;
+  font-weight: bold;
+}
+.feeling_at {
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 30px !important;
+  align-items: center;
+  gap: 10px;
+}
+.feeling_at_question {
+  position: relative;
+  cursor: pointer;
+  margin-top: 4px;
+  color: white;
+}
+.feeling_at_question_description {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 250px;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.feeling_at_question:hover .feeling_at_question_description,
+.feeling_at_question_description.active {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: auto;
+}
+
+.connect_validation {
+  margin-top: 10px;
+  display: flex;
+  padding: 5px;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
+  color: #de3842;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #1e1c1d !important
+  ;
+}
+/* Table */
+/* .table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input spinners for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.custom-table thead th {
+  font-family: sans-serif;
+  font-size: 11px;
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 1;
+}
+.table-container {
+  font-family: sans-serif !important;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  width: 93%;
+  max-height: 270px;
+  overflow-y: auto;
+  background: transparent; /* Optional: match your dark theme */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+.table-container::-webkit-scrollbar {
+  width: 6px; /* thin */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1); /* subtle white */
+  border-radius: 3px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.live-trades-table-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: transparent; /* Optional: match your dark theme */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+.live-trades-table-container::-webkit-scrollbar {
+  width: 6px; /* thin */
+}
+
+.live-trades-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.live-trades-table-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1); /* subtle white */
+  border-radius: 3px;
+}
+
+.live-trades-table-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.custom-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+
+.custom-table td {
+  padding: 10px 3px;
+  text-align: center;
+  font-family: monospace;
+  border: 1px solid #333;
+}
+
+.custom-table th {
+  text-align: center;
+  padding: 8px;
+  font-family: monospace;
+  background-color: #1e1c1d !important;
+  /* background-color: #211319; */
+}
+@media screen and (max-width: 500px) {
+  .table-container {
+    margin-left: 10px !important;
+  }
+  .custom-table td,
+  .custom-table th {
+    width: 90%;
+    font-size: 11px;
+    padding: 5px !important;
+  }
+}
+@media screen and (max-width: 330px) {
+  .custom-table td,
+  .custom-table th {
+    font-size: 11px;
+    padding: 8px 5px !important;
+  }
+}
+.custom-table tr:hover {
+  background-color: #21131990;
+}
+
+.win {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.lose {
+  color: #ff3333;
+  font-weight: bold;
+}
+
+.positive {
+  color: #00ff00;
+}
+
+.negative {
+  color: #ff3333;
+}
+
+/* Input */
+/* Input container */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 10px;
+}
+
+/* Input Label */
+.input-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #bbb;
+}
+
+/* Custom Input */
+.custom-input {
+  background-color: #222;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover & Focus */
+.custom-input:hover {
+  border-color: #ebf0eb;
+}
+
+.custom-input:focus {
+  border-color: #f2f5f2;
+  box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.5);
+}
+
+/* Placeholder Styling */
+.custom-input::placeholder {
+  color: #888;
+  opacity: 0.8;
+}
+
+/* Input animation */
+.custom-input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.connect_wallet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

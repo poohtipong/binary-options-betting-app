@@ -1,0 +1,32 @@
+.realtime_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.monospace_font {
+  font-family: "Courier New", Courier, monospace;
+}
+.sans_font {
+  font-family: sans-serif;
+}
+
+/* Add this to your CSS */
+.drop_down {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.drop_down:hover {
+  background: #333; /* Darker background when hovered */
+  color: #fff; /* Change text color to white on hover */
+}
+
+.drop_down.selected {
+  background: #5f8fff;
+  color: #fff;
+}

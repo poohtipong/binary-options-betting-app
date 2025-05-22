@@ -1,0 +1,43 @@
+.timer-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+/* Background Circle */
+.circle-background {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 6;
+}
+
+/* Progress Circle (Progressive Fill) */
+.circle-progress {
+  fill: none;
+  color: white !important;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1s linear;
+}
+
+/* 🔴 Red Color Increase Effect */
+.red-progress {
+  stroke: #5849fe !important;
+}
+
+/* 🟢 Green Color Increase Effect */
+.green-progress {
+  stroke: #de3842 !important;
+}
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white !important;
+
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+}
